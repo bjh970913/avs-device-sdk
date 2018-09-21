@@ -68,6 +68,8 @@ bool TestMimeJsonPart::validateMimeParsing() {
     return m_messageObserver->waitForDirective(m_message, WAIT_FOR_DIRECTIVE_TIMEOUT_IN_SECONDS);
 }
 
+TestMimeJsonPart::~TestMimeJsonPart(){};
+
 TestMimeAttachmentPart::TestMimeAttachmentPart(
     const std::string& boundaryString,
     const std::string& contextId,
@@ -109,6 +111,8 @@ bool TestMimeAttachmentPart::validateMimeParsing() {
 
     return true;
 }
+
+TestMimeAttachmentPart::~TestMimeAttachmentPart(){}
 
 std::string constructTestMimeString(
     const std::vector<std::shared_ptr<TestMimePart>>& mimeParts,

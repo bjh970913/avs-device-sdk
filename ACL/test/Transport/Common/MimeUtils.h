@@ -90,6 +90,8 @@ public:
     std::string getMimeString() const override;
     virtual bool validateMimeParsing() override;
 
+    virtual ~TestMimeJsonPart();
+
 private:
     /// The message text.
     std::string m_message;
@@ -125,6 +127,7 @@ public:
 
     std::string getMimeString() const override;
     virtual bool validateMimeParsing() override;
+    virtual ~TestMimeAttachmentPart();
 
 private:
     /// The context id of the simulated Attachment.
